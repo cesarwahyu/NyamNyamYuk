@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "1010800802291",
-    "firebase_url": "https://nyamnyamyuk.firebaseio.com",
-    "project_id": "nyamnyamyuk",
-    "storage_bucket": "nyamnyamyuk.appspot.com"
+    "project_number": "1085693141373",
+    "firebase_url": "https://nyamnyamyuk-f111d.firebaseio.com",
+    "project_id": "nyamnyamyuk-f111d",
+    "storage_bucket": "nyamnyamyuk-f111d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1010800802291:android:bd48610f844fa4d2",
+        "mobilesdk_app_id": "1:1085693141373:android:bd48610f844fa4d2",
         "android_client_info": {
           "package_name": "id.sch.smktelkom_mlg.project.xiirpl4102030.nyam_nyamyuk"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1010800802291-rus9bjrur4a5obat2qc51vpo05kglcb6.apps.googleusercontent.com",
+          "client_id": "1085693141373-vuevd950r0t8k7uur3vdc7v5ubitd241.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDo0-fKqn6sR8zXDS1Zz_OVS00r-q3jPuo"
+          "current_key": "AIzaSyBFl2w-x-kyFYYJnatru1hxDHFxXtjdduA"
         }
       ],
       "services": {
