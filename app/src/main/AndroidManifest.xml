@@ -3,6 +3,7 @@
     package="id.sch.smktelkom_mlg.project.xiirpl4102030.nyam_nyamyuk">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -10,6 +11,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- Splash screen -->
+
+        <activity
+            android:name="id.sch.smktelkom_mlg.project.xiirpl4102030.nyam_nyamyuk.splashscreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +36,9 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".ProfilActivity" />
-        <activity android:name=".RegistrasiActivity"></activity>
+        <activity android:name=".RegistrasiActivity">
+
+        </activity>
     </application>
 
 </manifest>
