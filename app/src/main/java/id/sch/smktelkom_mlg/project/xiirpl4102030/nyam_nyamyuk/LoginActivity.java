@@ -56,14 +56,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (TextUtils.isEmpty(email)) {
             //email harus diisi
-            Toast.makeText(this, "Isikan Email Anda", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " Masukan Email Anda", Toast.LENGTH_SHORT).show();
             //stop eksekusi fungsi
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
             //password harus diisi
-            Toast.makeText(this, "Isikan Password Anda", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " Masukan Password Anda", Toast.LENGTH_SHORT).show();
             //stop eksekusi fungsi
             return;
         }
@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if (task.isSuccessful()) {
                             //start profil activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
+                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         }
                     }
                 });

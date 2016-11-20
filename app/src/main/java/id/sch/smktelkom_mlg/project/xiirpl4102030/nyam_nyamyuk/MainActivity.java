@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonDaftar;
     private EditText editTextEmail;
     private EditText editTextPassword;
+    private EditText editTextNama;
     private TextView textViewMasuk;
 
     private ProgressDialog progressDialog;
@@ -37,10 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (firebaseAuth.getCurrentUser() != null) {
             //profil activity
             finish();
-            startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         }
 
         buttonDaftar = (Button) findViewById(R.id.buttonDaftar);
+        editTextNama = (EditText) findViewById(R.id.editTextNama);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         textViewMasuk = (TextView) findViewById(R.id.textViewMasuk);
@@ -52,19 +54,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void DaftarUser() {
+        String nama = editTextNama.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
+        if (TextUtils.isEmpty(nama)) {
+            //nama harus diisi
+            Toast.makeText(this, "Masukan Nama Anda", Toast.LENGTH_SHORT).show();
+            //stop eksekusi fungsi
+            return;
+        }
+
         if (TextUtils.isEmpty(email)) {
             //email harus diisi
-            Toast.makeText(this, "Isikan Email Anda", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Masukan Email Anda", Toast.LENGTH_SHORT).show();
             //stop eksekusi fungsi
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
             //password harus diisi
-            Toast.makeText(this, "Isikan Password Anda", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Masukan Password Anda", Toast.LENGTH_SHORT).show();
             //stop eksekusi fungsi
             return;
         }
@@ -74,17 +84,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog.setMessage("Mendaftar...");
         progressDialog.show();
 
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
+        firebaseAuth.createUserWithEmailAndPassword( email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
+                            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
 
                             //user sukses terdaftar dan masuk
-                            //profil activity akan segera keluar
-                            Toast.makeText(MainActivity.this, "User Sukses Terdaftar", Toast.LENGTH_SHORT).show();
+                         //Toast.makeText(MainActivity.this, "User Sukses Terdaftar", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(MainActivity.this, "Tidak Bisa Mendaftar.. Silahkan Coba Lagi", Toast.LENGTH_SHORT).show();
                         }

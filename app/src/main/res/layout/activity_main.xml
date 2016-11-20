@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -22,15 +23,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Registrasi User"
+            android:text="Daftar Akun"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_margin="15dp"
+            android:id="@+id/editTextNama"
+            android:hint="Masukan Nama Anda" />
 
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:hint="Isikan Email Anda"
+            android:hint="Masukan Email Anda"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -38,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:hint="Isikan Password Anda"
+            android:hint="Masukan Password Anda"
             android:inputType="textPassword" />
 
         <Button
@@ -46,7 +55,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Daftar USer" />
+            android:text="Daftar Akun" />
+
+        <TextView
+            android:text="Atau Daftar Menggunakan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            app:srcCompat="@mipmap/fb"
+            android:id="@+id/imageButton"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/textViewMasuk"
