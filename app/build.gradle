@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "id.sch.smktelkom_mlg.project.xiirpl4102030.nyam_nyamyuk"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"

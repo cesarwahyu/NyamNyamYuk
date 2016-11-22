@@ -27,12 +27,12 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
+            android:id="@+id/editTextNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:layout_margin="15dp"
-            android:id="@+id/editTextNama"
-            android:hint="Masukan Nama Anda" />
+            android:hint="Masukan Nama Anda"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -50,6 +50,14 @@
             android:hint="Masukan Password Anda"
             android:inputType="textPassword" />
 
+        <EditText
+            android:id="@+id/editTextReTypePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="Masukan Kembali Password Anda"
+            android:inputType="textPassword" />
+
         <Button
             android:id="@+id/buttonDaftar"
             android:layout_width="match_parent"
@@ -58,18 +66,18 @@
             android:text="Daftar Akun" />
 
         <TextView
-            android:text="Atau Daftar Menggunakan"
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:text="Atau Daftar Menggunakan" />
 
         <ImageButton
+            android:id="@+id/imageButton"
             android:layout_width="74dp"
             android:layout_height="62dp"
-            app:srcCompat="@mipmap/fb"
-            android:id="@+id/imageButton"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            app:srcCompat="@mipmap/fb" />
 
         <TextView
             android:id="@+id/textViewMasuk"

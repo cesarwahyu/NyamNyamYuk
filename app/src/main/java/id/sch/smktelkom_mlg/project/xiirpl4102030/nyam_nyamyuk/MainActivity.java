@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText editTextPassword;
     private EditText editTextNama;
     private TextView textViewMasuk;
+    private EditText editTextRePassword;
 
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         textViewMasuk = (TextView) findViewById(R.id.textViewMasuk);
+        editTextRePassword = (EditText) findViewById(R.id.editTextReTypePassword);
 
         progressDialog = new ProgressDialog(this);
 
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String nama = editTextNama.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String retype = editTextRePassword.getText().toString().trim();
 
         if (TextUtils.isEmpty(nama)) {
             //nama harus diisi
@@ -78,10 +81,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //stop eksekusi fungsi
             return;
         }
+
         //if validasi ok
         //progresbar akan keluar
 
-        progressDialog.setMessage("Mendaftar...");
+        progressDialog.setMessage("Masuk...");
         progressDialog.show();
 
         firebaseAuth.createUserWithEmailAndPassword( email, password)
