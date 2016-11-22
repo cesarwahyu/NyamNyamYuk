@@ -50,14 +50,6 @@
             android:hint="Masukan Password Anda"
             android:inputType="textPassword" />
 
-        <EditText
-            android:id="@+id/editTextReTypePassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:hint="Masukan Kembali Password Anda"
-            android:inputType="textPassword" />
-
         <Button
             android:id="@+id/buttonDaftar"
             android:layout_width="match_parent"
