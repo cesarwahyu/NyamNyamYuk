@@ -37,6 +37,10 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TampilanActivity"
+            android:label="@string/title_activity_tampilan"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
